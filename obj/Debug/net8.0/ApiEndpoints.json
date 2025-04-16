@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "insuranceWebApi.Controllers.CalculationController",
+    "Method": "Get",
+    "RelativePath": "api/Calculation/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "insuranceWebApi.Controllers.CalculationController",
+    "Method": "Get",
+    "RelativePath": "api/Calculation/Get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "insuranceWebApi.Controllers.CustomerController",
+    "Method": "Get",
+    "RelativePath": "api/Customer/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "insuranceWebApi.Controllers.CustomerController",
+    "Method": "Get",
+    "RelativePath": "api/Customer/Get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "insuranceWebApi.Controllers.PolicyController",
+    "Method": "Get",
+    "RelativePath": "api/Policy/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "insuranceWebApi.Controllers.PolicyController",
+    "Method": "Get",
+    "RelativePath": "api/Policy/Get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

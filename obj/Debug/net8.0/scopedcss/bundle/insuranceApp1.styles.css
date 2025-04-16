@@ -1,0 +1,49 @@
+/* _content/insuranceApp1/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-cib4jxiyao] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-cib4jxiyao] {
+  color: #0077cc;
+}
+
+.btn-primary[b-cib4jxiyao] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-cib4jxiyao], .nav-pills .show > .nav-link[b-cib4jxiyao] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-cib4jxiyao] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-cib4jxiyao] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-cib4jxiyao] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-cib4jxiyao] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-cib4jxiyao] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

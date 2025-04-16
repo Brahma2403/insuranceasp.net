@@ -1,0 +1,44 @@
+﻿@model IEnumerable<insuranceApp1.Models.Policy>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Policy_Layout.cshtml";
+}
+
+<h1>Policy Details</h1>
+<h3>Welcome , @ViewBag.UserName</h3>
+<p>
+    <a asp-action="Create">CreatePolicy</a>
+</p>
+<table class="table" width="100%" border="1">
+    <thead>
+        <tr>
+            <th>
+                PolicyId
+            </th>
+            <th>
+                PolicyType
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyType)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PolicyId">UpdatePolicy</a> |
+                <a asp-action="Details" asp-route-id="@item.PolicyId">GetPolicyDetails</a> |
+                <a asp-action="Delete" asp-route-id="@item.PolicyId">DeletePolicy</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table width="100%" height="100%" border="1">
+        <tr>
+            <th width="100%">
+                @Html.Partial("InsuranceHeader")
+            </th>
+        </tr>
+        <tr>
+            <th width="100%">
+                @RenderBody()
+            </th>
+        </tr>
+        <tr>
+            <th width="100%">
+                @Html.Partial("InsuranceFooter")
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

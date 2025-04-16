@@ -1,0 +1,56 @@
+﻿ @model IEnumerable<insuranceApp1.Models.Customer> 
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Customer_Layout.cshtml";
+}
+
+<h1>Customer Details</h1>
+<h3>Welcome , @ViewBag.UserName</h3>
+<p>
+    <a asp-action="Create" class="btn btn-primary">AddCustomer</a>
+</p>
+
+@if (Model ==null || !Model.Any()){
+    <div class="alert alert-warning">No spaces available.</div>
+}
+else{
+    <table class="table" width="100%" border="1">
+        <thead>
+            <tr>
+                <th>
+                    CustomerId
+                </th>
+                <th>
+                    Name
+                </th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CustomerId">UpdateCustomer</a> |
+                        <a asp-action="Details" asp-route-id="@item.CustomerId">GetCustomerDetails</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+               

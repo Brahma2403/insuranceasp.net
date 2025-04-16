@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-image: url(Images/pic4.jfif); /* Replace with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+            .form-container h3 {
+                color: black;
+                margin-bottom: 20px;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+        .form-label {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            input[type="text"]:hover, input[type="password"]:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            background: #28a745;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            button:hover {
+                transform: scale(1.1);
+                background: #218838;
+            }
+
+        a {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+            a:hover {
+                color: #ffeb3b;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid h-100 d-flex flex-column justify-content-between">
+        <header>
+            @Html.Partial("HomeHeader") <!-- Include the header partial view -->
+        </header>
+        <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+            <div>
+                @RenderBody() <!-- Content will be dynamically rendered here -->
+            </div>
+            <div class="form-container text-center shadow-lg">
+                <form action="/Home/Login" method="post">
+                    <h3>Login Here</h3>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">User Name:</label>
+                        <input type="text" id="username" name="txUser" class="form-control" placeholder="Enter your username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" id="password" name="txPsw" class="form-control" placeholder="Enter your password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Role:</label>
+                        <select id="role" name="role" class="form-select">
+                            <option value="User">User</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://localhost:7024/Home/RegisterUser" class="text-decoration-none">New User? Register User</a>
+                        <button type="submit" class="btn btn-success px-4">Login</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            @Html.Partial("InsuranceFooter") <!-- Include the footer partial view -->
+        </footer>
+    </div>
+</body>
+</html>

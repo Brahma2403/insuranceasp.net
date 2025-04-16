@@ -1,0 +1,52 @@
+﻿@model insuranceApp1.Models.Claim
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Claim_Layout.cshtml";
+}
+
+
+<h1>Submit Claim</h1>
+<h3>Welcome , @ViewBag.UserName</h3>
+<h4>Claim</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PolicyId" class="control-label"></label>
+                <input asp-for="PolicyId" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="ClaimAmount" class="control-label"></label>
+                <input asp-for="ClaimAmount" class="form-control" />
+                <span asp-validation-for="ClaimAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClaimStatus" class="control-label"></label>
+                <input asp-for="ClaimStatus" class="form-control" />
+                <span asp-validation-for="ClaimStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubmissionDate" class="control-label"></label>
+                <input asp-for="SubmissionDate" class="form-control" />
+                <span asp-validation-for="SubmissionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SettlementDate" class="control-label"></label>
+                <input asp-for="SettlementDate" class="form-control" />
+                <span asp-validation-for="SettlementDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
