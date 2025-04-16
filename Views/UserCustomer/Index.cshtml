@@ -1,0 +1,42 @@
+﻿@model List<Customer>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserCustomerLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                CustomerId
+            </th>
+            <th>
+                Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CustomerId">UpdateCustomer</a> |
+                <a asp-action="Details" asp-route-id="@item.CustomerId">GetCustomerDetails</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

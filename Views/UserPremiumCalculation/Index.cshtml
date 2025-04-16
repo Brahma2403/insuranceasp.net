@@ -1,0 +1,54 @@
+﻿@model IEnumerable<insuranceApp1.Models.PremiumCalculation>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserCalculationLayout.cshtml";
+}
+
+<h1>Premium Details</h1>
+<h3>Welcome , @ViewBag.UserName</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BasePremium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdjustedPremium)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CalculationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PolicyId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BasePremium)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdjustedPremium)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

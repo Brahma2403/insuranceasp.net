@@ -1,0 +1,40 @@
+﻿@model insuranceApp1.Models.Policy
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/UserPolicyLayout.cshtml";
+}
+
+<h1>Get Policy Details</h1>
+<h3>Welcome , @ViewBag.UserName</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <table class="table" width="100%" border="1">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PolicyId)</th>
+                    <th>@Html.DisplayNameFor(model => model.PolicyType)</th>
+                    <th>@Html.DisplayNameFor(model => model.CoverageAmount)</th>
+                    <th>@Html.DisplayNameFor(model => model.PremiumAmount)</th>
+                    <th>@Html.DisplayNameFor(model => model.ValidityStartDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.ValidityEndDate)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.PolicyId)</td>
+                    <td>@Html.DisplayFor(model => model.PolicyType)</td>
+                    <td>@Html.DisplayFor(model => model.CoverageAmount)</td>
+                    <td>@Html.DisplayFor(model => model.PremiumAmount)</td>
+                    <td>@Html.DisplayFor(model => model.ValidityStartDate)</td>
+                    <td>@Html.DisplayFor(model => model.ValidityEndDate)</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
